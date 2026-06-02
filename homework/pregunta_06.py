@@ -15,3 +15,8 @@ def pregunta_06():
     ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 
     """
+    import pandas as pd
+    df = pd.read_csv("files/input/tbl1.tsv", sep="\t")
+    valores_mayus = df['c4'].str.upper().unique()
+    resultado = sorted(list(valores_mayus))
+    return resultado
